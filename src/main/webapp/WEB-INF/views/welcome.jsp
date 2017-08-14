@@ -10,7 +10,7 @@
 <body>
 <h1>Welcome to GC Coffee!</h1>
 
-<a href="#"> Register</a>
+<a href="register"> Register</a>
 <br>
 <table border="1">
     <tr>

@@ -69,6 +69,33 @@ public class HomeController {
         return null;
     }
 
+    @RequestMapping("/register")
+    public ModelAndView register () {
+        return new ModelAndView("register", "inst",
+                "Please enter info: ");
+    }
+
+    //action that gets called>
+    @RequestMapping("/formhandler")
+    public ModelAndView formhandler(
+            @RequestParam("firstname") String firstname,
+            @RequestParam("lastname") String lastname,
+            @RequestParam("email") String email,
+            @RequestParam("phonenumber") String phonenumber,
+            @RequestParam("password") String password)
+
+    {
+        ModelAndView mv = new ModelAndView("adduser");
+        mv.addObject("firstname", firstname);
+        mv.addObject("lastname", lastname);
+        mv.addObject("email", email);
+        mv.addObject("phonenumber", phonenumber);
+        mv.addObject("password", password);
+
+        return mv;
+    }
+
+
 
 
 

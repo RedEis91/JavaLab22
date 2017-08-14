@@ -1,8 +1,5 @@
 package com.userdate.controller;
 
-/**
- * Created by Jared on 8/14/17.
- */
 public class Item {
     private String name;
     private String description;
