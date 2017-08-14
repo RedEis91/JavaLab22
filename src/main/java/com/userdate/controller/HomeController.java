@@ -11,8 +11,6 @@ import java.util.ArrayList;
 @Controller
 public class HomeController {
 
-
-
     @RequestMapping(value = "/")
     public ModelAndView helloWorld() {
         // defined the data for the connection
