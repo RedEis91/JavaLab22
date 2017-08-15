@@ -2,7 +2,14 @@
 
 body {
 
-    color: yellow;
+    color: blue;
     background-image: url("http://res.cloudinary.com/eisenhauermedia/image/upload/v1502803314/background-1909992_1920_cie2eh.jpg");
     font-family: 'Lato', sans-serif;
+}
+
+.form {
+    background-color: white;
+    max-width: 67%;
+    margin: 1%;
+    border-radius: 1px;
 }

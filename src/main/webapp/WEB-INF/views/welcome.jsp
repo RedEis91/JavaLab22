@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
+<div class="form">
 <h1>Welcome to GC Coffee!</h1>
-
 <a href="register"> Register</a>
 <br>
 <table border="1">
@@ -22,7 +22,6 @@
         <th>Quantity</th>
         <th>Price</th>
     </tr>
-
     <c:forEach items="${cList}" var="item">
         <tr>
             <td>
@@ -45,5 +44,6 @@
         </tr>
     </c:forEach>
 </table>
+</div>
 </body>
 </html>

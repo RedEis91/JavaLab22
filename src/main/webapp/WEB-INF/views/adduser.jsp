@@ -5,8 +5,9 @@
     <link href="resources/css/styles.css" rel="stylesheet"/>
 </head>
 <body>
+<div class="form">
 Hello ${firstname}<br>
-
+</div>
 
 </body>
 </html>

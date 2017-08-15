@@ -6,6 +6,7 @@
     <link href="resources/css/styles.css" rel="stylesheet"/>
 </head>
 <body>
+<div class="form">
 ${inst}
 <h1>Please fill in the form to register!</h1>
 <form action="formhandler" method="post">
@@ -16,5 +17,6 @@ ${inst}
     Password: <input type="password" name="password"><br>
     <input type="submit" name="submit" value="register">
 </form>
+</div>
 </body>
 </html>
