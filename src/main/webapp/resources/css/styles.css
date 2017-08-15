@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
+
     color: yellow;
-    background-color: pink;
+    background-image: url("http://res.cloudinary.com/eisenhauermedia/image/upload/v1502803314/background-1909992_1920_cie2eh.jpg");
+    font-family: 'Lato', sans-serif;
 }

@@ -21,31 +21,26 @@ public class HomeController {
         //password
         String password = "Createordie!1991";
 
+
         //load the driver, needs to be wrapped in try catch so that program doesn't crash:
         try {
             //dynamic:
             Class.forName("com.mysql.jdbc.Driver");
-
             //static load: (commented out for now)
             //DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 
             //create the db connection object
-            Connection mysqlConnection;
-            mysqlConnection = DriverManager.getConnection(dbAddress, username, password);
+            Connection mysqlConnection = DriverManager.getConnection(dbAddress, username, password);
 
             //create the db statement
             String readCustomersCommand = "select name,description,quantity, price from items";
 
             Statement readCustomers = mysqlConnection.createStatement(); // creates the statement
-
             ResultSet results = readCustomers.executeQuery(readCustomersCommand);
             //executes the statement / query to get the data from the database, stores in ResultSet called results
-
             //array list of customers
             ArrayList<Item> inventory = new ArrayList<Item>();
-
             //map from the ResultSet to the ArrayList, one row at a time, using results.next()
-
             while(results.next()) {
                 //loops to make sure there is a next row in results
                 //depends on type of data you are trying to fetch
@@ -54,18 +49,21 @@ public class HomeController {
                 //adds temporary customer object to inventory
                 inventory.add(temp);
             }
-
             return new ModelAndView("welcome", "cList", inventory);
-
-
         } catch (Exception e)
-
         {
             e.printStackTrace();
         }
         // todo: create an error page with custom error messages !!!!
         return null;
     }
+//    @RequestMapping(value="/")
+//        public ModelAndView orderUp(ArrayList<Item> inventory) {
+//
+//
+//    }
+
+
 
     @RequestMapping("/register")
     public ModelAndView register () {
@@ -92,6 +90,7 @@ public class HomeController {
 
         return mv;
     }
+
 
 
 
