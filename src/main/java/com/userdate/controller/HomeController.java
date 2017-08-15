@@ -21,7 +21,6 @@ public class HomeController {
         //password
         String password = "Createordie!1991";
 
-
         //load the driver, needs to be wrapped in try catch so that program doesn't crash:
         try {
             //dynamic:
@@ -31,10 +30,8 @@ public class HomeController {
 
             //create the db connection object
             Connection mysqlConnection = DriverManager.getConnection(dbAddress, username, password);
-
             //create the db statement
             String readCustomersCommand = "select name,description,quantity, price from items";
-
             Statement readCustomers = mysqlConnection.createStatement(); // creates the statement
             ResultSet results = readCustomers.executeQuery(readCustomersCommand);
             //executes the statement / query to get the data from the database, stores in ResultSet called results
@@ -57,19 +54,20 @@ public class HomeController {
         // todo: create an error page with custom error messages !!!!
         return null;
     }
-//    @RequestMapping(value="/")
-//        public ModelAndView orderUp(ArrayList<Item> inventory) {
-//
-//
-//    }
-
-
 
     @RequestMapping("/register")
     public ModelAndView register () {
         return new ModelAndView("register", "inst",
                 "Please enter info: ");
     }
+//    @RequestMapping("/login")
+//    public ModelAndView login ( @RequestParam("firstname") String firstname,
+//                                @RequestParam("lastname") String lastname) {
+//
+//        ModelAndView mv = new ModelAndView("login");
+//
+//        return new ModelAndView("login");
+//    }
 
     //action that gets called>
     @RequestMapping("/formhandler")
@@ -79,7 +77,6 @@ public class HomeController {
             @RequestParam("email") String email,
             @RequestParam("phonenumber") String phonenumber,
             @RequestParam("password") String password)
-
     {
         ModelAndView mv = new ModelAndView("adduser");
         mv.addObject("firstname", firstname);
@@ -90,10 +87,4 @@ public class HomeController {
 
         return mv;
     }
-
-
-
-
-
-
 }

@@ -13,8 +13,15 @@
 <body>
 <div class="form">
 <h1>Welcome to GC Coffee!</h1>
+</div>
+<div class="form">
 <a href="register"> Register</a>
+</div>
+<div class="form">
+<a href="login"> Login</a>
+</div>
 <br>
+<div class="form">
 <table border="1">
     <tr>
         <th>Name</th>

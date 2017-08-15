@@ -6,7 +6,11 @@
 </head>
 <body>
 <div class="form">
-Hello ${firstname}<br>
+Hello ${firstname}!<br>
+</div>
+
+<div class="form">
+    <a href="/">Go Home</a>
 </div>
 
 </body>

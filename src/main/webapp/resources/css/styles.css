@@ -9,7 +9,7 @@ body {
 
 .form {
     background-color: white;
-    max-width: 67%;
+    max-width: max-content;
     margin: 1%;
     border-radius: 1px;
 }
